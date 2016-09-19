@@ -50,37 +50,6 @@ p {
   margin: 0 2% 20px;
 }
 
-@media (min-width: 768px) {
-   .container {
-     width: 750px;
-   }
- }
- @media (min-width: 992px) {
-   .container {
-     width: 970px;
-   }
-   .one-half {
-     width:46%;
-   }
-   .one-third {
-     width:29.33333%;
-   }
-   .one-fourth {
-     width:21%;
-   }
- }
- @media (min-width: 1200px) {
-   .container {
-     width: 1170px;
-   }
- }
-
- @media (min-width: 2000px) {
-   .hero {
-     color: #c6b712;
-   }
- }
-
  /* HEADER */
   header {
     color:#dedede;
@@ -90,11 +59,16 @@ p {
   header nav {
     padding:1em 0;
   }
+  .logo-container {
+    text-align: center;
+  }
+  .nav-container {
+    text-align: center;
+  }
   header nav ul {
     display:inline;
-    text-align: right;
-    float:right;
     margin:0;
+    padding-left:0;
   }
   header nav ul > li {
     list-style-type: none;
@@ -149,6 +123,43 @@ header .hero img {
    border: 2px solid #c6b712;
    box-shadow: 0px 2px 0px 0px #787012;
  }
+ /* Media Queries */
+ @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+    .logo-container {
+      text-align: left;
+    }
+    .nav-container {
+      text-align: right;
+    }
+    .one-half {
+      width:46%;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+    .one-third {
+      width:29.33333%;
+    }
+    .one-fourth {
+      width:21%;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+
+  @media (min-width: 2000px) {
+    .hero {
+      color: #c6b712;
+    }
+  }
 
  /* BENEFITS */
  .benefits {
@@ -175,14 +186,14 @@ header .hero img {
  }
  /* PRICING */
   .pricing {
-    background: #34495E url("../images/background.png") top center no-repeat;
+    background: #48555e url("../images/background.png") top center no-repeat;
     background: url("../images/background.png") top center no-repeat, linear-gradient(206deg, #5F81A3 0%, #34495E 94%);
     background-size:cover;
     text-align: center;
     padding:4em 0;
   }
   .pricing h2, .pricing p {
-    color:#FFFFFF;
+    color:#dedede;
   }
   .pricing ul {
     margin:0 auto;
@@ -302,3 +313,55 @@ header .hero img {
 .lower{
   margin-top: 20px;
 }
+/* FOOTER */
+footer {
+ background-color: #446d8a;
+ background-image: linear-gradient(to top,
+    #446d8a 0%, #446d8a 50%, #48555e 50%, #48555e 100%);
+ color: #dedede;
+ height: 150px;
+ position: relative;
+ overflow: hidden;
+ z-index: 0;
+}
+footer p, footer nav ul {
+ font-size:14px;
+ font-weight:100;
+ text-align: center;
+ margin: 10px auto 0;
+}
+footer nav ul li {
+ list-style-type: none;
+ display: inline;
+}
+footer nav ul li a {
+ color:#dedede;
+ text-decoration: none;
+}
+footer .right-footer-block {
+ background-color: transparent;
+}
+footer .logo{
+ padding: 2.35em 0;
+ margin: 0 auto;
+ display: block;
+}
+ /*Footer Media */
+ @media (min-width: 992px){
+   footer{
+     background-color: #3498DB;
+     background-image: linear-gradient(to left,
+        #446d8a 0%, #446d8a 33.33337%, #48555e 33.33337%, #48555e 100%);
+     height: 100px;
+   }
+   footer p, footer nav ul{
+     padding: 2em 0;
+     text-align: left;
+   }
+   footer .right-footer-block {
+     background-color: #446d8a;
+   }
+   footer .logo{
+     padding: 2em 0 2em 1.5em;
+   }
+ }
