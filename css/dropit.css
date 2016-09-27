@@ -86,3 +86,9 @@ margin: 20px 0 0;
   bottom: -8px;
   right: 10px;
  }
+
+ .dropit .dropit-open .dropit-submenu li {
+ display: block;
+ margin-bottom: 20px;
+ text-align: left;
+ display: inline-block;} 
